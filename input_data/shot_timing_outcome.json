@@ -1,0 +1,9 @@
+{
+    "timing": {
+      "Early": [0,1,2,"wicket"],
+      "Good": [1,2,3,4,5,6],
+      "Perfect": [4,6],
+      "Late": [1,"wicket"]
+    }
+  }
+  

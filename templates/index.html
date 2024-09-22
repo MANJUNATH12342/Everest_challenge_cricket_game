@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <form action="super_over/">
+        <input type="submit" value="Play Super Over" id="play-super-over-btn" />
+    </form>
+    
+    <div class="container">
+        <h1>Cricket Game</h1>
+        <form id="inputForm" class="form">
+            {% csrf_token %}
+            <label for="bowling-type">Bowling Type:</label>
+            <select id="bowling-type" name="bowling-type" class="form-control">
+                <option value="">Select Bowling Type</option>
+            </select>
+            <br>
+            <label for="shot">Shot:</label>
+            <select id="shot" name="shot" class="form-control">
+                <option value="">Select Shot</option>
+            </select>
+            <br>
+            <label for="timing">Timing:</label>
+            <select id="timing" name="timing" class="form-control">
+                <!-- Timing options will be populated dynamically -->
+            </select>
+            <br>
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+        <div id="response" class="response-box"></div>
+    </div>
+</body>
+</html>

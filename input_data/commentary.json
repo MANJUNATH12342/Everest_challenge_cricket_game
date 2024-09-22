@@ -1,0 +1,32 @@
+{
+  "It's a wicket":{
+    "result":["wicket"]
+  },
+  "Excellent line and length":{
+    "result":[0]
+  },
+  "Edge and Taken":{
+    "result":["wicket"],
+    "shot":["CoverDrive", "SquareCut", "Scoop", "UpperCut"]
+  },
+  "Just over the fielder":{
+    "result":[1,2,3,4,5]
+  },
+  "Its a huge hit":{
+    "result":[4,6]
+  },
+  "Excellent effort on the boundary":{
+    "result":[1,2,3]
+  },
+  "Convert ones into twos":{
+    "result":[2]
+  },
+  "That's massive and out of the ground":{
+    "result":[6]
+  },
+  "Excellent running between the wickets":{
+    "result":[3]
+  }
+  
+}
+

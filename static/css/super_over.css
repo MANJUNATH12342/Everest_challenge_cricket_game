@@ -1,0 +1,149 @@
+.container {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Space between items */
+}
+.form-container {
+    width: 48%; /* Width of the form section */
+}
+.response-container {
+    width: 48%; /* Width of the response section */
+    border: 1px solid #ccc; /* Optional border */
+    padding: 10px; /* Padding for better visibility */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+/* General reset */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Arial', sans-serif;
+}
+
+/* Body styling */
+body {
+background-color: #f4f4f9;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+padding: 20px;
+}
+
+/* Container styling */
+.container {
+display: flex; /* Use flexbox layout */
+justify-content: space-between; /* Space between form and response */
+background-color: white;
+padding: 30px; /* Increased padding for a larger feel */
+border-radius: 10px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+max-width: 1400px;
+width: 100%;
+}
+
+/* Header styling */
+h1 {
+font-size: 32px; /* Increased font size */
+color: #333;
+margin-bottom: 20px;
+text-transform: uppercase;
+letter-spacing: 1.5px;
+text-align: center; /* Centered title */
+}
+
+/* Form field styling */
+label {
+font-size: 18px; /* Increased font size */
+color: #333;
+text-align: left;
+display: block;
+margin-bottom: 5px;
+}
+
+select {
+width: 100%;
+padding: 12px; /* Increased padding */
+border: 1px solid #ddd;
+border-radius: 5px;
+font-size: 16px;
+margin-bottom: 20px; /* Increased margin for better spacing */
+background-color: #f9f9f9;
+}
+
+button {
+width: 100%;
+padding: 12px; /* Increased padding */
+background-color: #28a745;
+color: white;
+font-size: 18px; /* Increased font size */
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+button:hover {
+background-color: #218838;
+}
+
+/* Response box styling */
+.response-box {
+width: 300px; /* Fixed width for response box */
+margin-left: 20px; /* Space between form and response box */
+padding: 20px; /* Increased padding */
+border: 1px solid #ddd;
+border-radius: 5px;
+background-color: #f9f9f9;
+min-height: 100px; /* Increased minimum height */
+text-align: left;
+font-size: 16px; /* Increased font size */
+line-height: 1.6; /* Improved line spacing */
+width: 90%;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+.container {
+flex-direction: column; /* Stack items vertically on small screens */
+align-items: center; /* Center align */
+}
+
+.response-box {
+width: 100%; /* Full width on small screens */
+margin-left: 0; /* Remove left margin */
+margin-top: 20px; /* Add top margin */
+}
+
+h1 {
+font-size: 24px; /* Adjusted for smaller screens */
+}
+
+label, select, button {
+font-size: 14px; /* Adjusted for smaller screens */
+}
+}
+
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+button {
+    margin: 10px;
+}

@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+
+    <title>Super Over Game</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'js/super_over.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/super_over.css' %}">
+
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Super Over Game</h1>
+            <form id="superOverForm" method="POST" action="{% url 'play_super_over' %}">
+                {% csrf_token %}
+                <label for="bowling-type">Bowling Type:</label>
+                <select id="bowling-type" name="bowling-type">
+                    <option value="">Select Bowling Type</option>
+                </select>
+                <br>
+
+                <label for="shot">Shot:</label>
+                <select id="shot" name="shot">
+                    <option value="">Select Shot</option>
+                </select>
+                <br>
+
+                <label for="timing">Timing:</label>
+                <select id="timing" name="timing">
+                    <option value="">Select Timing</option>
+                </select>
+                <br>
+
+                <label for="bowler">Bowler:</label>
+                <select id="bowler" name="bowler">
+                    <option value="">Select Bowler</option>
+                </select>
+                <br>
+
+                <label for="batsman">Batsman:</label>
+                <select id="batsman" name="batsman">
+                    <option value="">Select Batsman</option>
+                </select>
+                <br>
+
+                <button type="submit">Submit Ball</button>
+            </form>
+        </div>
+
+        <div class="response-container">
+            <h2>Results</h2>
+            <div id="response" class="response-box"></div>
+        </div>
+    </div>
+    <div id="play-again-container" style="display: none; text-align: center; margin-top: 20px;">
+        <button id="play-again-button" style="padding: 15px 30px; font-size: 18px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Play Again
+        </button>
+        <button id="go-to-home-page" style="padding: 15px 30px; font-size: 18px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Play Cricket
+        </button>
+    </div>
+
+</body>
+</html>

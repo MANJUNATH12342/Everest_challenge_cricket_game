@@ -1,0 +1,12 @@
+{
+    "Bouncer": ["Pull", "UpperCut", "SquareCut"],
+    "Inswinger": ["CoverDrive", "LegLance", "Flick", "Straight"],
+    "Outswinger": ["CoverDrive", "SquareCut", "Straight", "UpperCut"],
+    "LegCutter": ["CoverDrive", "SquareCut", "Straight", "UpperCut"],
+    "OffCutter": ["Flick", "LegLance", "Straight", "Pull"],
+    "SlowerBall": ["Straight", "CoverDrive", "Flick", "Pull", "Scoop", "UpperCut"],
+    "Yorker": ["Straight", "Flick", "LegLance", "Scoop"],
+    "Pace": ["Straight", "CoverDrive", "Pull", "SquareCut", "Flick", "UpperCut"],
+    "OffBreak": ["CoverDrive", "Sweep", "Flick", "SquareCut"],
+    "Doosra": ["CoverDrive", "SquareCut", "Flick"]
+  }

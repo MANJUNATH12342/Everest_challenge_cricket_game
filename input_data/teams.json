@@ -1,0 +1,13 @@
+{
+    "teams": [
+      {
+        "team_name": "India",
+        "players": ["Ranganathan B", "Sudhakar Dharwada", "Mohammed Faizuddin", "Lakshmi Prasanna", "Venkateshwar K", "Donna Issac", "Varenya Raj", "Naveen Kumar B", "Nidhuraj", "Ravinder Deolal", "Anirudh B"]
+      },
+      {
+        "team_name": "Australia",
+        "players": ["Craig Brown", "Chris Jones", "Martin Chesbrough", "Ringo Thomas", "Benjamin Blackwood", "Ceola Flannery", "Asad Naveed", "Daniel Prager", "Brent Snook", "Rick Giner", "Charlott"]
+      }
+    ]
+  }
+  
