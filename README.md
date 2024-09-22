@@ -27,7 +27,7 @@ cricket_game/
 │   ├── apps.py              # App configuration class
 │   ├── env/                 # Virtual environment directory (not typically included in version control)
 │   ├── migrations/          # Database migrations for the app
-│   ├── models.py            # Database models representing the game's data
+│   ├── models.py            # This is not used in the application at present as the game is generating the json file for the tracking of the super over match 
 │   ├── tests.py             # Tests for the application
 │   ├── urls.py              # URL routing for the app
 │   ├── utils.py             # Utility functions used in the app
