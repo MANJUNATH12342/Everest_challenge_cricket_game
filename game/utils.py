@@ -2,6 +2,7 @@ import json
 from django.conf import settings
 from pathlib import Path
 from django.http import JsonResponse
+from datetime import datetime
 
 class Read_input_files():
         # Load JSON files
@@ -31,11 +32,11 @@ class Read_input_files():
     
     def super_over_match_result(self,json_data):
         base_dir = Path(settings.BASE_DIR)
-        # del json_data["current_ball"]
-        # del json_data["play_again"]
+        current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
+        file_name = f'super_over_match_{current_time}.json'
         new_data = {k: v for k, v in json_data.items() if k != "current_ball" and k!="play_again" }
         json_object = json.dumps(new_data,indent=4)
-        with open(base_dir / 'output_data' / 'super_over_match.json','w') as f:
+        with open(base_dir / 'output_data' / file_name,'w') as f:
             f.write(json_object)
             
         return json_object
