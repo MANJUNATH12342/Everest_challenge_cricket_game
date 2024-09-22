@@ -7,30 +7,45 @@ from datetime import datetime
 class Read_input_files():
         # Load JSON files
     def bowling_shot_mapping_file(self):
+        """ 
+        This function reads and retuns the bowling_shot_mapping.json file
+        """
         base_dir = Path(settings.BASE_DIR)
         with open(base_dir / 'input_data' / 'bowling_shot_mapping.json') as f:
             bowling_shot_mapping = json.load(f)
         return bowling_shot_mapping
     
     def commentary_file(self):
+        """ 
+        This function reads and retuns the commentary.json file
+        """
         base_dir = Path(settings.BASE_DIR)
         with open(base_dir / 'input_data' / 'commentary.json') as f:
             commentary = json.load(f)
         return commentary
     
     def shot_timing_outcome_file(self):
+        """ 
+        This function reads and retuns the shot_timing_outcome.json file
+        """
         base_dir = Path(settings.BASE_DIR)
         with open(base_dir / 'input_data' / 'shot_timing_outcome.json') as f:
             shot_timing_outcome = json.load(f)
         return shot_timing_outcome
     
     def teams_file(self):
+        """ 
+        This function reads and retuns the teams.json file
+        """
         base_dir = Path(settings.BASE_DIR)
         with open(base_dir / 'input_data' / 'teams.json') as f:
             teams_players_mapping = json.load(f)
         return teams_players_mapping
     
     def super_over_match_result(self,json_data):
+        """ 
+        This function generates the output file that contains the track record of the super over match
+        """
         base_dir = Path(settings.BASE_DIR)
         current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
         file_name = f'super_over_match_{current_time}.json'
@@ -43,6 +58,10 @@ class Read_input_files():
 
 class Validation_and_operation():
     def validate_inputs(self,bowling_type, shot, timing, bowling_shot_mapping, shot_timing_outcome):
+        """ 
+        This function validates all the input file and returns the error if any issue found
+        """
+        
         if bowling_type not in bowling_shot_mapping:
             return JsonResponse({'error': 'Invalid bowling type'}, status=400)
 

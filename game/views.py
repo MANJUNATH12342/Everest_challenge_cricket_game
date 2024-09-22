@@ -14,7 +14,9 @@ def super_over_view(request):
 
 @csrf_exempt
 def get_mapping_data(request):
-
+    """
+    This function returns all the input json files 
+    """
     try:
 
         input_files = Read_input_files()
@@ -39,7 +41,10 @@ def get_mapping_data(request):
 
 @csrf_exempt
 def process_input(request):
-
+    """
+    This function allows the user to give the input for bowling type , shot, and timing and returns the random runs and commentary
+    according to the  mapping in the input json files  
+    """
     try:
         input_files = Read_input_files()
         validate_inputs_and_operation = Validation_and_operation()
@@ -100,6 +105,10 @@ def process_input(request):
 
 @csrf_exempt
 def play_super_over(request):
+    """ 
+    This function allows the user to give the input for bowling type , shot, timing , batsman, and bowler for the super over
+    and returns the the random runs and commentary according to the  mapping in the input json files
+    """
     try:
         # Load JSON files
         input_files = Read_input_files()
