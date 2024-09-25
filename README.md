@@ -156,7 +156,7 @@ To run the test cases, follow these steps:
    Open your terminal or command prompt and navigate to the root directory of your Django project.
 
    ```bash
-   cd path/to/your/cricket_game
+   cd path/to/the/cricket_game
 
    python manage.py test game.tests.tests
 
