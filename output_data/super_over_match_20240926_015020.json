@@ -1,0 +1,81 @@
+{
+    "result": "India Lost!. India scored 8 runs in 6 balls.",
+    "ball_outcomes": [
+        {
+            "ball_number": 1,
+            "bowler": "Craig Brown",
+            "batsman": "Ranganathan B",
+            "outcome": 1,
+            "bowling_type": "LegCutter",
+            "shot": "UpperCut",
+            "timing": "Early",
+            "commentary": "Just over the fielder",
+            "target_runs": 21,
+            "total_wickets_in_hand": 2
+        },
+        {
+            "ball_number": 2,
+            "bowler": "Craig Brown",
+            "batsman": "Ranganathan B",
+            "outcome": 2,
+            "bowling_type": "LegCutter",
+            "shot": "UpperCut",
+            "timing": "Early",
+            "commentary": "Excellent effort on the boundary",
+            "target_runs": 21,
+            "total_wickets_in_hand": 2
+        },
+        {
+            "ball_number": 3,
+            "bowler": "Craig Brown",
+            "batsman": "Ranganathan B",
+            "outcome": 2,
+            "bowling_type": "LegCutter",
+            "shot": "UpperCut",
+            "timing": "Early",
+            "commentary": "Just over the fielder",
+            "target_runs": 21,
+            "total_wickets_in_hand": 2
+        },
+        {
+            "ball_number": 4,
+            "bowler": "Craig Brown",
+            "batsman": "Ranganathan B",
+            "outcome": 2,
+            "bowling_type": "LegCutter",
+            "shot": "UpperCut",
+            "timing": "Early",
+            "commentary": "Just over the fielder",
+            "target_runs": 21,
+            "total_wickets_in_hand": 2
+        },
+        {
+            "ball_number": 5,
+            "bowler": "Craig Brown",
+            "batsman": "Ranganathan B",
+            "outcome": 1,
+            "bowling_type": "LegCutter",
+            "shot": "UpperCut",
+            "timing": "Early",
+            "commentary": "Excellent effort on the boundary",
+            "target_runs": 21,
+            "total_wickets_in_hand": 2
+        },
+        {
+            "ball_number": 6,
+            "bowler": "Craig Brown",
+            "batsman": "Ranganathan B",
+            "outcome": "wicket",
+            "bowling_type": "LegCutter",
+            "shot": "UpperCut",
+            "timing": "Early",
+            "commentary": "It's a wicket",
+            "target_runs": 21,
+            "total_wickets_in_hand": 1
+        }
+    ],
+    "total_runs": 8,
+    "wickets_lost": 1,
+    "target_runs": 21,
+    "Total_wickets": 2
+}

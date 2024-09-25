@@ -161,7 +161,6 @@ def play_super_over(request):
 
             game_state['balls_played'] += 1
             # Record ball 
-            print(game_state['wickets'],"[[[[[[[[[[[[[]]]]]]]]]]]]]")
             game_state['ball_outcomes'].append({
                 'ball_number': game_state['balls_played'],
                 'bowler': bowler,

@@ -9,6 +9,3 @@ __pycache__/
 game/__pycache__/
 game/tests/__pycache__/
 
-# Ignore all files in output_data but keep the directory
-output_data/*
-!output_data/.gitkeep  # Keep a dummy file to track the directory
