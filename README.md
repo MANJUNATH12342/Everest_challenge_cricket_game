@@ -110,6 +110,7 @@ cricket_game/
 2. Install Django using pip:
    ```bash
    pip install django
+
    ```
 3. Cloning repository
    git clone https://github.com/MANJUNATH12342/Everest_challenge_cricket_game/tree/development
@@ -117,7 +118,8 @@ cricket_game/
 5. Navigate into the project directory
   
       ```bash
-    python manage.py runserver
+   python manage.py migrate
+   python manage.py runserver
    ```
 ## **Playing the Game**
 
