@@ -123,3 +123,49 @@ cricket_game/
 
 - To play the normal cricket game (Challenge #1 and Challenge #2), navigate to the `/` URL.
 - To play the Super Over game, click on the button labeled "Play Super Over" on the homepage. This will redirect you to the Super Over game interface.
+
+
+## Cricket Game Test Suite
+
+This repository includes a comprehensive test suite for the Cricket Game application, which features end-to-end testing and unit testing for core functionalities. Below is a guide on how to run the tests, along with a brief description of each test file.
+
+This project implements a Cricket Game, and the tests aim to ensure the functionality of key components, including the normal gameplay and the Super Over feature. The tests are organized in a dedicated directory for clarity and maintainability.
+
+### Test Files Overview
+
+#### 1. `tests.py`
+
+- **Description**: This file contains end-to-end tests that cover the full workflow of the Cricket Game application. It simulates user interactions and validates the responses from the server.
+- **Purpose**: To ensure that the entire game flow, from starting the game to completing the Super Over, functions correctly.
+
+#### 2. `test_process_input.py`
+
+- **Description**: This file specifically tests the `process_input` function responsible for handling normal game inputs and processing the corresponding outcomes.
+- **Purpose**: To validate that inputs are processed correctly and that the game logic responds as expected.
+
+#### 3. `test_play_super_over.py`
+
+- **Description**: This file tests the `play_super_over` function, which manages the Super Over feature of the game. It verifies that inputs related to the Super Over are handled properly and that the correct outcomes are generated.
+- **Purpose**: To ensure the Super Over logic works as intended and returns the expected results based on user inputs.
+
+### Running the Tests
+
+To run the test cases, follow these steps:
+
+1. **Navigate to the Project Directory**:
+   Open your terminal or command prompt and navigate to the root directory of your Django project.
+
+   ```bash
+   cd path/to/your/cricket_game
+
+   python manage.py test game.tests.tests
+
+   python manage.py test game.tests.test_process_input
+
+   python manage.py test game.tests.test_play_super_over
+
+   ```
+
+
+
+

@@ -1,0 +1,5 @@
+# Ignore all files in the output_data directory
+output_data/*
+
+# Ignore all __pycache__ directories in the project
+**/__pycache__/

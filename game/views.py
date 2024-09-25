@@ -63,7 +63,6 @@ def process_input(request):
             if validation_error:
                 return validation_error
 
-
             # Determine possible outcomes based on timing
             possible_outcomes = shot_timing_outcome['timing'][timing]
             outcome = random.choice(possible_outcomes)
@@ -116,7 +115,7 @@ def play_super_over(request):
         bowling_shot_mapping = input_files.bowling_shot_mapping_file()
         commentary = input_files.commentary_file()
         shot_timing_outcome = input_files.shot_timing_outcome_file()
-
+        game_track=[]
         # Game state (for demonstration, use session to track state)
         if 'game_state' not in request.session:
             request.session['game_state'] = {
@@ -161,7 +160,8 @@ def play_super_over(request):
                 game_state['wickets_lost'] += 1
 
             game_state['balls_played'] += 1
-            # Record ball outcome
+            # Record ball 
+            print(game_state['wickets'],"[[[[[[[[[[[[[]]]]]]]]]]]]]")
             game_state['ball_outcomes'].append({
                 'ball_number': game_state['balls_played'],
                 'bowler': bowler,
@@ -172,20 +172,20 @@ def play_super_over(request):
                 'timing': timing,
                 'commentary': commentary_text,
                 'target_runs': game_state['target_runs'],
-                'total_wickets_in_hand': game_state['wickets']
+                'total_wickets_in_hand': game_state['wickets']-game_state['wickets_lost']
                 
             })
             # End match conditions
             if game_state['total_runs'] >= game_state['target_runs']:
-                result = "You Won!"
+                result = "India Won!"
                 game_over = True
                 request.session.flush()  # Clear game state at the 
             elif game_state['wickets_lost'] >= game_state['wickets']:
-                result = "You Lost!"
+                result = "India Lost!"
                 game_over = True
                 request.session.flush()  # Clear game state at the end
             elif game_state['balls_played'] >= 6:
-                result = f"You Lost!. You scored {game_state['total_runs']} runs in 6 balls."
+                result = f"India Lost!. India scored {game_state['total_runs']} runs in 6 balls."
                 game_over = True
                 request.session.flush()  # Clear game state at the end
             else:
@@ -209,9 +209,10 @@ def play_super_over(request):
                 'Total_wickets': game_state['wickets'],
                 'play_again': game_over 
             }
-   
             request.session.modified = True
-            input_files.super_over_match_result(response)
+            game_track.append(response)
+            if game_over == True:   
+                input_files.super_over_match_result(response)
             return JsonResponse(response)
 
     except json.JSONDecodeError:

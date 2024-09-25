@@ -18,12 +18,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 import os
 # from game.utils import load_json
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR1 = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# BOWLING_SHOT_MAPPING = load_json(os.path.join(BASE_DIR, 'input_data', 'bowling_shot_mapping.json'))
-# SHOT_TIMING_OUTCOME = load_json(os.path.join(BASE_DIR, 'input_data', 'shot_timing_outcome.json'))
-# COMMENTARY = load_json(os.path.join(BASE_DIR, 'input_data', 'commentary.json'))
-# TEAMS = load_json(os.path.join(BASE_DIR, 'input_data', 'teams.json'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -90,7 +86,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators

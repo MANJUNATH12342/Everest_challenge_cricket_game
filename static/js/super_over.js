@@ -76,6 +76,7 @@ $(document).ready(function() {
             method: 'POST',
             contentType: 'application/json',  // Set content type to JSON
             data: JSON.stringify(data),  // Convert data to JSON
+            
             success: function(response) {
                 // Update the response box with the ball outcomes
                 const responseBox = $('#response');
@@ -97,10 +98,12 @@ $(document).ready(function() {
                 
                 if (response.wickets_lost !== undefined) {
                     responseBox.append(`<p><strong>Wickets Lost: ${response.wickets_lost}:</strong> </p>`);
-                    responseBox.append(`<p><strong>Total wickets in hand: ${response.total_wickets_in_hand}:</strong> </p>`);
+                    
+                    
                 }
-
-                responseBox.append('<p>' + response.result + '</p>');
+                
+                responseBox.append('<p><strong>' + response.result + '</strong></p>');
+                
                 console.log(response)
                 // Check if the game is over and prompt the user
                 if (response.play_again) {
