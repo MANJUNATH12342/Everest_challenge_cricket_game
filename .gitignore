@@ -3,3 +3,5 @@
 **/__pycache__/
 db.sqlite3
 game/migrations/*
+game/__pycache__
+game/tests/__pycache__
