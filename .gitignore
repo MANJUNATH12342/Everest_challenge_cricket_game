@@ -1,7 +1,14 @@
-
-# Ignore all __pycache__ directories in the project
-**/__pycache__/
+# Ignore SQLite database
 db.sqlite3
+
+# Ignore migrations
 game/migrations/*
-game/__pycache__
-game/tests/__pycache__
+
+# Ignore __pycache__ directories
+__pycache__/
+game/__pycache__/
+game/tests/__pycache__/
+
+# Ignore all files in output_data but keep the directory
+output_data/*
+!output_data/.gitkeep  # Keep a dummy file to track the directory
